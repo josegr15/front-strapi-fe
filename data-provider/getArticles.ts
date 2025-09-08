@@ -3,6 +3,7 @@
 import { gql } from '@/graphql/getContent';
 import { ARTICLES_QUERY } from '@/graphql/queries/article';
 import { ArticlesResult } from './types/Article';
+import { mapImage } from './mappers/mapImage';
 
 type Props = {
   sort?: string;
@@ -19,5 +20,14 @@ export const getArticles = async ({
     { next: { revalidate: 60 } }
   );
 
-  return articles;
+  return {
+    ...articles,
+    data: {
+      ...articles.data,
+      articles: articles.data.articles.map(article => ({
+        ...article,
+        Image: mapImage(article.Image),
+      })),
+    },
+  };
 };

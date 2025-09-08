@@ -7,6 +7,10 @@ export const ARTICLES_QUERY = /* GraphQL */ `
       slug
       content
       createdAt
+      Image {
+        url
+        alternativeText
+      }
       __typename
     }
   }

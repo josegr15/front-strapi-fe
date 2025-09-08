@@ -6,6 +6,10 @@ type ArticleNode = {
   slug: string;
   content: BlocksContent;
   createdAt: string;
+  Image: {
+    url: string;
+    alternativeText: string;
+  };
   __typename: string;
 };
 
