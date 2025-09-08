@@ -1,7 +1,6 @@
-// graphql/queries/article.ts
-export const ARTICLES_QUERY = /* GraphQL */ `
-  query Articles($sort: [String!] = ["createdAt:desc"], $limit: Int = 10) {
-    articles(sort: $sort, pagination: { limit: $limit }) {
+export const ARTICLE_BY_ID_QUERY = /* GraphQL */ `
+  query ArticleById($id: ID!) {
+    article(documentId: $id) {
       documentId
       title
       slug

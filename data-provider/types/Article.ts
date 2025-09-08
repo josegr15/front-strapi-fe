@@ -1,6 +1,6 @@
 import { BlocksContent } from '@strapi/blocks-react-renderer';
 
-type ArticleNode = {
+export type ArticleNode = {
   documentId: string;
   title: string;
   slug: string;

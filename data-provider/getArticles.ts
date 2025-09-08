@@ -2,8 +2,8 @@
 
 import { gql } from '@/graphql/getContent';
 import { ARTICLES_QUERY } from '@/graphql/queries/article';
-import { ArticlesResult } from './types/Article';
 import { mapImage } from './mappers/mapImage';
+import { ArticlesResult } from './types/article';
 
 type Props = {
   sort?: string;
@@ -19,6 +19,8 @@ export const getArticles = async ({
     { sort: [sort], limit },
     { next: { revalidate: 60 } }
   );
+
+  console.log('articles result', articles);
 
   return {
     ...articles,

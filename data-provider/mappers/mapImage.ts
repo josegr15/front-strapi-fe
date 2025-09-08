@@ -1,4 +1,4 @@
-import { Image } from '../types/Image';
+import { Image } from '../types/image';
 
 export const mapImage = (image: Image) => {
   return {
