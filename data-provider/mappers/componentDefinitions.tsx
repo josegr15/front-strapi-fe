@@ -5,6 +5,8 @@ import { ArticleHeader } from '@/components/ArticleHeader/ArticleHeader';
 import { mapArticleHeader } from './components/mapArticleHeader';
 import { ComponentTypename, UiComponent } from '../types/common';
 import { mapArticleContent } from './components/mapArticleContent';
+import { GuideDetails } from '@/components/GuideDetails/GuideDetails';
+import { mapGuideDetails } from './components/mapGuideDetails';
 
 type MapperProps = {
   component: any;
@@ -26,5 +28,9 @@ export const COMPONENT_DEFINITIONS = {
   ComponentComponentsUiArticleHeader: {
     component: (data: any) => <ArticleHeader {...data} />,
     mapper: props => mapArticleHeader(props),
+  },
+  ComponentComponentsUiGuideDetails: {
+    component: (data: any) => <GuideDetails {...data} />,
+    mapper: props => mapGuideDetails(props),
   },
 } as const satisfies ComponentDefinitions;

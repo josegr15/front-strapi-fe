@@ -37,4 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 # front-strapi-fe
 
-//TODO: Add page context to mappers, i.e allow UiArticleContent to pull data from content field from the page
+TODO: Add more fields and try to mimic front demo on details page
