@@ -1,11 +1,18 @@
 import { ArticleContentProps } from '@/components/ArticleContent/ArticleContent.types';
+import { ArticlePage } from '@/data-provider/types/article';
 import { ArticleContent } from '@/data-provider/types/ArticleContent';
 
-export const mapArticleContent = (
-  data: ArticleContent
-): ArticleContentProps => {
+type Props = {
+  component: ArticleContent;
+  context?: ArticlePage;
+};
+
+export const mapArticleContent = ({
+  component,
+  context,
+}: Props): ArticleContentProps => {
   return {
-    __typename: data.__typename,
-    content: data.content,
+    __typename: component.__typename,
+    content: context?.content || [],
   };
 };

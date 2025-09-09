@@ -1,7 +1,7 @@
 import { BlocksContent } from '@strapi/blocks-react-renderer';
 import { ComponentTypename } from './common';
 
-export type ArticleNode = {
+export type ArticlePage = {
   documentId: string;
   title: string;
   slug: string;
@@ -19,12 +19,12 @@ export type ArticleNode = {
 
 export type ArticlesResponse = {
   data: {
-    articles: ArticleNode[];
+    articles: ArticlePage[];
   };
 };
 
 export type ArticleResponse = {
   data: {
-    article: ArticleNode;
+    article: ArticlePage;
   };
 };
