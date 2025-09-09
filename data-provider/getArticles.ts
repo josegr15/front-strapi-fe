@@ -20,8 +20,6 @@ export const getArticles = async ({
     { next: { revalidate: 60 } }
   );
 
-  console.log('articles result', articles);
-
   return {
     ...articles,
     data: {

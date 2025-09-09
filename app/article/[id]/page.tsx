@@ -1,4 +1,5 @@
-import { getArticleById } from '@/data-provider/api/getArticleById';
+import { getArticlePage } from '@/data-provider/api/getArticlePage';
+import { RenderComponents } from '@/components/RenderComponents/RenderComponents';
 import React from 'react';
 
 type Props = {
@@ -10,10 +11,13 @@ type Props = {
 const ArticlePage = async ({ params }: Props) => {
   const { id } = await params;
 
-  const article = await getArticleById(id);
-  console.log('article', article);
+  const article = await getArticlePage(id);
 
-  return <div>page</div>;
+  return (
+    <div>
+      <RenderComponents components={article.components} />
+    </div>
+  );
 };
 
 export default ArticlePage;
