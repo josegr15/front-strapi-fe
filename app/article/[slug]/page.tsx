@@ -4,14 +4,14 @@ import React from 'react';
 
 type Props = {
   params: Promise<{
-    id: string;
+    slug: string;
   }>;
 };
 
 const ArticlePage = async ({ params }: Props) => {
-  const { id } = await params;
+  const { slug } = await params;
 
-  const article = await getArticlePage(id);
+  const article = await getArticlePage(slug);
 
   return (
     <div>

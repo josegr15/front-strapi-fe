@@ -1,10 +1,10 @@
-import { getArticleById } from '@/network/getArticleById';
+import { getArticleBySlug } from '@/network/getArticleBySlug';
 import { COMPONENT_DEFINITIONS } from '../mappers/components';
 
-export const getArticlePage = async (id: string) => {
-  const { data } = await getArticleById(id);
+export const getArticlePage = async (slug: string) => {
+  const data = await getArticleBySlug(slug);
 
-  const components = data.article.components;
+  const components = data.components;
 
   const mappedComponents = components.map(component => {
     const mapper = COMPONENT_DEFINITIONS[component.__typename].mapper;
