@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import Image from 'next/image';
-import { getArticles } from '@/data-provider/getArticles';
+import { getArticles } from '@/data-provider/api/getArticles';
 
 export default async function Home() {
   const result = await getArticles();

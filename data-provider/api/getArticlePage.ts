@@ -1,5 +1,5 @@
 import { getArticleBySlug } from '@/network/getArticleBySlug';
-import { COMPONENT_DEFINITIONS } from '../mappers/components';
+import { COMPONENT_DEFINITIONS } from '../mappers/componentDefinitions';
 
 export const getArticlePage = async (slug: string) => {
   const data = await getArticleBySlug(slug);

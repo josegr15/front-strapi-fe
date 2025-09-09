@@ -5,11 +5,11 @@ const STRAPI_URL = process.env.STRAPI_URL!;
 const TOKEN = process.env.STRAPI_API_TOKEN;
 
 type FetchOptions = {
-  next?: { revalidate?: number }
-  cache?: RequestCache
-  headers?: HeadersInit
-}
-
+  next?: { revalidate?: number };
+  cache?: RequestCache;
+  headers?: HeadersInit;
+};
+//TODO: Make this function decent
 export async function gql<T>(
   query: string,
   variables?: Record<string, unknown>,

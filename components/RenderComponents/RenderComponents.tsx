@@ -1,8 +1,6 @@
+import { COMPONENT_DEFINITIONS } from '@/data-provider/mappers/componentDefinitions';
+import { UiComponent } from '@/data-provider/types/common';
 import React from 'react';
-import {
-  COMPONENT_DEFINITIONS,
-  UiComponent,
-} from '@/data-provider/mappers/components';
 
 type Props = {
   components: UiComponent[];
